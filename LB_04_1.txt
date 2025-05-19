@@ -2,7 +2,7 @@ ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
 Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-59-generic aarch64)
 
 ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=Dr0-ozdik777
-ubuntu@Ubuntu-GUI:~$ export GITHUB_TOKEN=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
+ubuntu@Ubuntu-GUI:~$ export GITHUB_TOKEN=*****
 ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
 ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
 ~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
@@ -207,7 +207,7 @@ addons:
       - cmake
       - cmake-data
 EOF
-ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis login --github-token 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
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis login --github-token ***
 Command 'travis' not found, but can be installed with:
 sudo snap install travis  # version 1.8.9, or
 sudo apt  install travis  # version 220729-1
@@ -216,7 +216,7 @@ ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install travis --
 ERROR:  Error installing travis:
 	The last version of public_suffix (>= 2.0.2, < 7.0) to support your Ruby & RubyGems was 4.0.7. Try installing it with `gem install public_suffix -v 4.0.7` and then running the current command again
 	public_suffix requires Ruby version >= 3.0. The current ruby version is 2.5.0.
-ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis login --github-token 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
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis login --github-token ****
 Command 'travis' not found, but can be installed with:
 sudo snap install travis  # version 1.8.9, or
 sudo apt  install travis  # version 220729-1
