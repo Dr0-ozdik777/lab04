@@ -1,0 +1,982 @@
+ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-59-generic aarch64)
+
+ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~$ export GITHUB_TOKEN=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
+ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
+~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
+Turning on ignore dotfiles mode.
+Downloading https://github.com/rvm/rvm/archive/master.tar.gz
+Installing RVM to /home/ubuntu/.rvm/
+Installation of RVM in /home/ubuntu/.rvm/ is almost complete:
+
+  * To start using RVM you need to run `source /home/ubuntu/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+Thanks for installing RVM 🙏
+Please consider donating to our open collective to help us maintain RVM.
+
+👉  Donate: https://opencollective.com/rvm/donate
+
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ echo "source $HOME/.rvm/scripts/rvm" >> scripts/activate
+ubuntu@Ubuntu-GUI:~$ echo "source $HOME/.rvm/scripts/rvm" >> scripts/activate
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ . scripts/activate
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ rvm autolibs disable
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ rvm install ruby-2.4.2
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-2.4.2.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-2.4.2, this may take a while depending on your cpu(s)...
+ruby-2.4.2 - #downloading ruby-2.4.2, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12.0M  100 12.0M    0     0  8902k      0  0:00:01  0:00:01 --:--:-- 8902k
+ruby-2.4.2 - #extracting ruby-2.4.2 to /home/ubuntu/.rvm/src/ruby-2.4.2.....
+ruby-2.4.2 - #configuring..................................................................
+ruby-2.4.2 - #post-configuration..
+ruby-2.4.2 - #compiling..................................................................................-
+ruby-2.4.2 - #installing...........
+ruby-2.4.2 - #making binaries executable..
+ruby-2.4.2 - #downloading rubygems-3.0.9
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  865k  100  865k    0     0  1744k      0 --:--:-- --:--:-- --:--:-- 1748k
+No checksum for downloaded archive, recording checksum in user configuration.
+ruby-2.4.2 - #extracting rubygems-3.0.9.....
+ruby-2.4.2 - #removing old rubygems........
+ruby-2.4.2 - #installing rubygems-3.0.9..
+Error running 'env GEM_HOME=/home/ubuntu/.rvm/gems/ruby-2.4.2@global GEM_PATH= /home/ubuntu/.rvm/rubies/ruby-2.4.2/bin/ruby -d /home/ubuntu/.rvm/src/rubygems-3.0.9/setup.rb --no-document',
+please read /home/ubuntu/.rvm/log/1747673129_ruby-2.4.2/rubygems.install.log
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ sudo apt install -y libssl-dev libreadline-dev zlib1g-dev build-essential
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+zlib1g-dev is already the newest version (1:1.3.dfsg-3.1ubuntu2.1).
+zlib1g-dev set to manually installed.
+build-essential is already the newest version (12.10ubuntu1).
+The following additional packages will be installed:
+  libncurses-dev
+Suggested packages:
+  ncurses-doc readline-doc libssl-doc
+The following NEW packages will be installed:
+  libncurses-dev libreadline-dev libssl-dev
+0 upgraded, 3 newly installed, 0 to remove and 91 not upgraded.
+Need to get 2900 kB of archives.
+After this operation, 16.4 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libncurses-dev arm64 6.4+20240113-1ubuntu2 [385 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libreadline-dev arm64 8.2-4build1 [177 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libssl-dev arm64 3.0.13-0ubuntu3.5 [2337 kB]
+Fetched 2900 kB in 1s (2053 kB/s)         
+Selecting previously unselected package libncurses-dev:arm64.
+(Reading database ... 199774 files and directories currently installed.)
+Preparing to unpack .../libncurses-dev_6.4+20240113-1ubuntu2_arm64.deb ...
+Unpacking libncurses-dev:arm64 (6.4+20240113-1ubuntu2) ...
+Selecting previously unselected package libreadline-dev:arm64.
+Preparing to unpack .../libreadline-dev_8.2-4build1_arm64.deb ...
+Unpacking libreadline-dev:arm64 (8.2-4build1) ...
+Selecting previously unselected package libssl-dev:arm64.
+Preparing to unpack .../libssl-dev_3.0.13-0ubuntu3.5_arm64.deb ...
+Unpacking libssl-dev:arm64 (3.0.13-0ubuntu3.5) ...
+Setting up libncurses-dev:arm64 (6.4+20240113-1ubuntu2) ...
+Setting up libreadline-dev:arm64 (8.2-4build1) ...
+Setting up libssl-dev:arm64 (3.0.13-0ubuntu3.5) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for install-info (7.1-3build2) ...
+Scanning processes...                                                                                     
+Scanning linux images...                                                                                  
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ rvm install ruby-2.5.9 --with-openssl-dir=/usr/include/openssl
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-2.5.9, this may take a while depending on your cpu(s)...
+ruby-2.5.9 - #downloading ruby-2.5.9, this may take a while depending on your connection...
+ruby-2.5.9 - #extracting ruby-2.5.9 to /home/ubuntu/.rvm/src/ruby-2.5.9.....
+ruby-2.5.9 - #applying patch /home/ubuntu/.rvm/patches/ruby/2.5.9/opensslv30.patch.
+ruby-2.5.9 - #configuring...................................................................
+ruby-2.5.9 - #post-configuration..
+ruby-2.5.9 - #compiling..................................................................................-
+ruby-2.5.9 - #installing...............
+ruby-2.5.9 - #making binaries executable..
+ruby-2.5.9 - #downloading rubygems-3.0.9
+ruby-2.5.9 - #extracting rubygems-3.0.9.....
+ruby-2.5.9 - #removing old rubygems........
+ruby-2.5.9 - #installing rubygems-3.0.9................................................................
+ruby-2.5.9 - #gemset created /home/ubuntu/.rvm/gems/ruby-2.5.9@global
+ruby-2.5.9 - #importing gemset /home/ubuntu/.rvm/gemsets/global.gems.....................................-
+ruby-2.5.9 - #generating global wrappers........
+ruby-2.5.9 - #gemset created /home/ubuntu/.rvm/gems/ruby-2.5.9
+ruby-2.5.9 - #importing gemsetfile /home/ubuntu/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-2.5.9 - #generating default wrappers........
+ruby-2.5.9 - #adjusting #shebangs for (gem irb erb ri rdoc testrb rake).
+Install of ruby-2.5.9 - #complete 
+Please be aware that you just installed a ruby that requires 1 patches just to be compiled on an up to date linux system.
+This may have known and unaccounted for security vulnerabilities.
+Please consider upgrading to ruby-3.4.1 which will have all of the latest security patches.
+Ruby was built without documentation, to build it run: rvm docs generate-ri
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ rvm use ruby-2.5.9 --default
+Using /home/ubuntu/.rvm/gems/ruby-2.5.9
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
+OpenSSL 3.0.13 30 Jan 2024
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ gem update --system 2.7.10
+Updating rubygems-update
+Fetching rubygems-update-2.7.10.gem
+Successfully installed rubygems-update-2.7.10
+Parsing documentation for rubygems-update-2.7.10
+Installing ri documentation for rubygems-update-2.7.10
+Installing darkfish documentation for rubygems-update-2.7.10
+Done installing documentation for rubygems-update after 16 seconds
+Parsing documentation for rubygems-update-2.7.10
+Done installing documentation for rubygems-update after 0 seconds
+Installing RubyGems 2.7.10
+Bundler 1.16.6 installed
+RubyGems 2.7.10 installed
+Regenerating binstubs
+Parsing documentation for rubygems-2.7.10
+Installing ri documentation for rubygems-2.7.10
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/ubuntu/.rvm/rubies/ruby-2.5.9/bin/gem
+	/home/ubuntu/.rvm/rubies/ruby-2.5.9/bin/bundle
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man 
+pages for Ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+
+RubyGems system software updated
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ gem install travis --no-document
+Fetching: rack-3.1.15.gem (100%)
+Successfully installed rack-3.1.15
+Fetching: rack-test-2.1.0.gem (100%)
+Successfully installed rack-test-2.1.0
+Fetching: websocket-1.2.11.gem (100%)
+Successfully installed websocket-1.2.11
+Fetching: pusher-client-0.6.2.gem (100%)
+Successfully installed pusher-client-0.6.2
+Fetching: public_suffix-6.0.2.gem (100%)
+ERROR:  Error installing travis:
+	The last version of public_suffix (>= 2.0.2, < 7.0) to support your Ruby & RubyGems was 4.0.7. Try installing it with `gem install public_suffix -v 4.0.7` and then running the current command again
+	public_suffix requires Ruby version >= 3.0. The current ruby version is 2.5.0.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab03 projects/lab04
+Cloning into 'projects/lab04'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), 5.12 KiB | 476.00 KiB/s, done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd projects/lab04
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git remote remove origin
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git remote add origin https://github.com/Dr0-ozdik777/lab04
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ cat > .travis.yml <<EOF
+language: cpp
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ cat >> .travis.yml <<EOF
+
+script:
+- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
+- cmake --build _build
+- cmake --build _build --target install
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ cat >> .travis.yml <<EOF
+
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis login --github-token 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
+Command 'travis' not found, but can be installed with:
+sudo snap install travis  # version 1.8.9, or
+sudo apt  install travis  # version 220729-1
+See 'snap info travis' for additional versions.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install travis --no-document
+ERROR:  Error installing travis:
+	The last version of public_suffix (>= 2.0.2, < 7.0) to support your Ruby & RubyGems was 4.0.7. Try installing it with `gem install public_suffix -v 4.0.7` and then running the current command again
+	public_suffix requires Ruby version >= 3.0. The current ruby version is 2.5.0.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis login --github-token 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
+Command 'travis' not found, but can be installed with:
+sudo snap install travis  # version 1.8.9, or
+sudo apt  install travis  # version 220729-1
+See 'snap info travis' for additional versions.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install travis --no-document --verbose
+HEAD https://api.rubygems.org/api/v1/dependencies
+404 Not Found
+GET https://api.rubygems.org/prerelease_specs.4.8.gz
+304 Not Modified
+GET https://api.rubygems.org/specs.4.8.gz
+304 Not Modified
+ERROR:  Error installing travis:
+	The last version of public_suffix (>= 2.0.2, < 7.0) to support your Ruby & RubyGems was 4.0.7. Try installing it with `gem install public_suffix -v 4.0.7` and then running the current command again
+	public_suffix requires Ruby version >= 3.0. The current ruby version is 2.5.0.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem environment
+RubyGems Environment:
+  - RUBYGEMS VERSION: 2.7.10
+  - RUBY VERSION: 2.5.9 (2021-04-05 patchlevel 229) [aarch64-linux]
+  - INSTALLATION DIRECTORY: /home/ubuntu/.rvm/gems/ruby-2.5.9
+  - USER INSTALLATION DIRECTORY: /home/ubuntu/.gem/ruby/2.5.0
+  - RUBY EXECUTABLE: /home/ubuntu/.rvm/rubies/ruby-2.5.9/bin/ruby
+  - EXECUTABLE DIRECTORY: /home/ubuntu/.rvm/gems/ruby-2.5.9/bin
+  - SPEC CACHE DIRECTORY: /home/ubuntu/.gem/specs
+  - SYSTEM CONFIGURATION DIRECTORY: /home/ubuntu/.rvm/rubies/ruby-2.5.9/etc
+  - RUBYGEMS PLATFORMS:
+    - ruby
+    - aarch64-linux
+  - GEM PATHS:
+     - /home/ubuntu/.rvm/gems/ruby-2.5.9
+     - /home/ubuntu/.rvm/gems/ruby-2.5.9@global
+  - GEM CONFIGURATION:
+     - :update_sources => true
+     - :verbose => true
+     - :backtrace => false
+     - :bulk_threshold => 1000
+  - REMOTE SOURCES:
+     - https://rubygems.org/
+  - SHELL PATH:
+     - /home/ubuntu/.rvm/gems/ruby-2.5.9/bin
+     - /home/ubuntu/.rvm/gems/ruby-2.5.9@global/bin
+     - /home/ubuntu/.rvm/rubies/ruby-2.5.9/bin
+     - /home/ubuntu/.rvm/bin
+     - /usr/local/sbin
+     - /usr/local/bin
+     - /usr/sbin
+     - /usr/bin
+     - /sbin
+     - /bin
+     - /usr/games
+     - /usr/local/games
+     - /snap/bin
+     - /home/ubuntu/Dr0-ozdik777/workspace/node/bin
+     - /home/ubuntu/Dr0-ozdik777/workspace/node/bin
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem list | grep travis
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ ls -l ~/.rvm/gems/ruby-2.5.9/bin | grep travis
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install public_suffix -v 4.0.7
+Fetching: public_suffix-4.0.7.gem (100%)
+Successfully installed public_suffix-4.0.7
+Parsing documentation for public_suffix-4.0.7
+Installing ri documentation for public_suffix-4.0.7
+Done installing documentation for public_suffix after 0 seconds
+1 gem installed
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install travis --no-document
+Fetching: addressable-2.8.7.gem (100%)
+Successfully installed addressable-2.8.7
+Fetching: launchy-2.5.2.gem (100%)
+Successfully installed launchy-2.5.2
+Fetching: json_pure-2.6.3.gem (100%)
+Successfully installed json_pure-2.6.3
+Fetching: highline-2.1.0.gem (100%)
+Successfully installed highline-2.1.0
+Fetching: net-http-pipeline-1.0.1.gem (100%)
+Successfully installed net-http-pipeline-1.0.1
+Fetching: connection_pool-2.5.3.gem (100%)
+Successfully installed connection_pool-2.5.3
+Fetching: net-http-persistent-4.0.5.gem (100%)
+Successfully installed net-http-persistent-4.0.5
+Fetching: multi_json-1.15.0.gem (100%)
+Successfully installed multi_json-1.15.0
+Fetching: ffi-1.17.2-aarch64-linux-gnu.gem (100%)
+ERROR:  Error installing travis:
+	The last version of ffi (>= 1.15.0) to support your Ruby & RubyGems was 1.17.2. Try installing it with `gem install ffi -v 1.17.2` and then running the current command again
+	ffi requires RubyGems version >= 3.3.22. The current RubyGems version is 2.7.10. Try 'gem update --system' to update RubyGems itself.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem update --system
+Updating rubygems-update
+Fetching: rubygems-update-3.6.9.gem (100%)
+ERROR:  Error installing rubygems-update:
+	There are no versions of rubygems-update (= 3.6.9) compatible with your Ruby & RubyGems
+	rubygems-update requires Ruby version >= 3.1.0. The current ruby version is 2.5.0.
+Installing RubyGems 2.7.10
+Bundler 1.16.6 installed
+RubyGems 2.7.10 installed
+Regenerating binstubs
+Parsing documentation for rubygems-2.7.10
+Installing ri documentation for rubygems-2.7.10
+
+=== 2.7.10 / 2019-06-14
+
+Minor enhancements:
+
+* Fix bundler rubygems binstub not properly looking for bundler. Pull request #2426
+  by David Rodríguez.
+* [BudlerVersionFinder] set .filter! and .compatible? to match only on major versions.
+  Pull request #2515 by Colby Swandale.
++ Update for compatibilty with new minitest. Pull request #2118 by MSP-Greg.
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/home/ubuntu/.rvm/rubies/ruby-2.5.9/bin/gem
+	/home/ubuntu/.rvm/rubies/ruby-2.5.9/bin/bundle
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man 
+pages for Ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+
+RubyGems system software updated
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ rvm install ruby-3.1.4
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-3.1.4.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-3.1.4, this may take a while depending on your cpu(s)...
+ruby-3.1.4 - #downloading ruby-3.1.4, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 19.9M  100 19.9M    0     0  17.9M      0  0:00:01  0:00:01 --:--:-- 17.9M
+ruby-3.1.4 - #extracting ruby-3.1.4 to /home/ubuntu/.rvm/src/ruby-3.1.4.....
+ruby-3.1.4 - #autogen.sh.
+Error running '/home/ubuntu/.rvm/src/ruby-3.1.4/autogen.sh',
+please read /home/ubuntu/.rvm/log/1747674927_ruby-3.1.4/autogen.sh.log
+There has been an error while running autogen.sh. Halting the installation.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ ruby -v
+ruby 2.5.9p229 (2021-04-05 revision 67939) [aarch64-linux]
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ rvm use ruby-3.1.4 --default
+Required ruby-3.1.4 is not installed.
+To install do: 'rvm install "ruby-3.1.4"'
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ sudo apt update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+91 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ sudo apt install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev libgmp-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'libncurses-dev' instead of 'libncurses5-dev'
+build-essential is already the newest version (12.10ubuntu1).
+libssl-dev is already the newest version (3.0.13-0ubuntu3.5).
+libreadline-dev is already the newest version (8.2-4build1).
+zlib1g-dev is already the newest version (1:1.3.dfsg-3.1ubuntu2.1).
+libncurses-dev is already the newest version (6.4+20240113-1ubuntu2).
+libncurses-dev set to manually installed.
+The following additional packages will be installed:
+  automake autotools-dev libgmpxx4ldbl m4
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc libtool gettext bison-doc gmp-doc libgmp10-doc libmpfr-dev
+  libyaml-doc m4-doc
+The following NEW packages will be installed:
+  autoconf automake autotools-dev bison libffi-dev libgdbm-dev libgmp-dev libgmpxx4ldbl libyaml-dev m4
+0 upgraded, 10 newly installed, 0 to remove and 91 not upgraded.
+Need to get 2507 kB of archives.
+After this operation, 9583 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 m4 arm64 1.4.19-4build1 [240 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 autoconf all 2.71-3 [339 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 autotools-dev all 20220109.1 [44.9 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 automake all 1:1.16.5-1.3ubuntu1 [558 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 bison arm64 2:3.8.2+dfsg-1build2 [740 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libgdbm-dev arm64 1.23-5.1build1 [118 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libgmpxx4ldbl arm64 2:6.3.0+dfsg-2ubuntu6.1 [10.1 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libgmp-dev arm64 2:6.3.0+dfsg-2ubuntu6.1 [334 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libffi-dev arm64 3.4.6-1build1 [59.5 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libyaml-dev arm64 0.2.5-1build1 [63.4 kB]
+Fetched 2507 kB in 1s (1673 kB/s)       
+Selecting previously unselected package m4.
+(Reading database ... 200018 files and directories currently installed.)
+Preparing to unpack .../0-m4_1.4.19-4build1_arm64.deb ...
+Unpacking m4 (1.4.19-4build1) ...
+Selecting previously unselected package autoconf.
+Preparing to unpack .../1-autoconf_2.71-3_all.deb ...
+Unpacking autoconf (2.71-3) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../2-autotools-dev_20220109.1_all.deb ...
+Unpacking autotools-dev (20220109.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../3-automake_1%3a1.16.5-1.3ubuntu1_all.deb ...
+Unpacking automake (1:1.16.5-1.3ubuntu1) ...
+Selecting previously unselected package bison.
+Preparing to unpack .../4-bison_2%3a3.8.2+dfsg-1build2_arm64.deb ...
+Unpacking bison (2:3.8.2+dfsg-1build2) ...
+Selecting previously unselected package libgdbm-dev:arm64.
+Preparing to unpack .../5-libgdbm-dev_1.23-5.1build1_arm64.deb ...
+Unpacking libgdbm-dev:arm64 (1.23-5.1build1) ...
+Selecting previously unselected package libgmpxx4ldbl:arm64.
+Preparing to unpack .../6-libgmpxx4ldbl_2%3a6.3.0+dfsg-2ubuntu6.1_arm64.deb ...
+Unpacking libgmpxx4ldbl:arm64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Selecting previously unselected package libgmp-dev:arm64.
+Preparing to unpack .../7-libgmp-dev_2%3a6.3.0+dfsg-2ubuntu6.1_arm64.deb ...
+Unpacking libgmp-dev:arm64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Selecting previously unselected package libffi-dev:arm64.
+Preparing to unpack .../8-libffi-dev_3.4.6-1build1_arm64.deb ...
+Unpacking libffi-dev:arm64 (3.4.6-1build1) ...
+Selecting previously unselected package libyaml-dev:arm64.
+Preparing to unpack .../9-libyaml-dev_0.2.5-1build1_arm64.deb ...
+Unpacking libyaml-dev:arm64 (0.2.5-1build1) ...
+Setting up libyaml-dev:arm64 (0.2.5-1build1) ...
+Setting up m4 (1.4.19-4build1) ...
+Setting up libffi-dev:arm64 (3.4.6-1build1) ...
+Setting up autotools-dev (20220109.1) ...
+Setting up libgmpxx4ldbl:arm64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Setting up autoconf (2.71-3) ...
+Setting up bison (2:3.8.2+dfsg-1build2) ...
+update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) in auto mode
+Setting up libgdbm-dev:arm64 (1.23-5.1build1) ...
+Setting up automake (1:1.16.5-1.3ubuntu1) ...
+update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode
+Setting up libgmp-dev:arm64 (2:6.3.0+dfsg-2ubuntu6.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for install-info (7.1-3build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Scanning processes...                                                                                     
+Scanning linux images...                                                                                  
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ cat /home/ubuntu/.rvm/log/1747675071_ruby-3.1.4/autogen.sh.log
+[2025-05-19 20:17:55] /home/ubuntu/.rvm/src/ruby-3.1.4/autogen.sh
+current path: /home/ubuntu/.rvm/src/ruby-3.1.4
+GEM_PATH=/home/ubuntu/.rvm/gems/ruby-2.5.9:/home/ubuntu/.rvm/gems/ruby-2.5.9@global
+GEM_HOME=/home/ubuntu/.rvm/gems/ruby-2.5.9
+PATH=/home/ubuntu/.rvm/gems/ruby-2.5.9/bin:/home/ubuntu/.rvm/gems/ruby-2.5.9@global/bin:/home/ubuntu/.rvm/rubies/ruby-2.5.9/bin:/home/ubuntu/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/Dr0-ozdik777/workspace/node/bin:/home/ubuntu/Dr0-ozdik777/workspace/node/bin
+command(1): /home/ubuntu/.rvm/src/ruby-3.1.4/autogen.sh
+/home/ubuntu/.rvm/src/ruby-3.1.4/autogen.sh: 17: exec: autoreconf: not found
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ rvm install ruby-3.1.4
+ruby-3.1.4 - #removing src/ruby-3.1.4..
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-3.1.4.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-3.1.4, this may take a while depending on your cpu(s)...
+ruby-3.1.4 - #downloading ruby-3.1.4, this may take a while depending on your connection...
+ruby-3.1.4 - #extracting ruby-3.1.4 to /home/ubuntu/.rvm/src/ruby-3.1.4.....
+ruby-3.1.4 - #autogen.sh.
+ruby-3.1.4 - #configuring...............................................................
+ruby-3.1.4 - #post-configuration..
+ruby-3.1.4 - #compiling..................................................................................|
+ruby-3.1.4 - #installing.....................
+ruby-3.1.4 - #making binaries executable...
+Installed rubygems 3.3.26 is newer than 3.0.9 provided with installed ruby, skipping installation, use --force to force installation.
+ruby-3.1.4 - #gemset created /home/ubuntu/.rvm/gems/ruby-3.1.4@global
+ruby-3.1.4 - #importing gemset /home/ubuntu/.rvm/gemsets/global.gems.....................................-
+ruby-3.1.4 - #generating global wrappers........
+ruby-3.1.4 - #gemset created /home/ubuntu/.rvm/gems/ruby-3.1.4
+ruby-3.1.4 - #importing gemsetfile /home/ubuntu/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-3.1.4 - #generating default wrappers........
+ruby-3.1.4 - #adjusting #shebangs for (gem irb erb ri rdoc testrb rake).
+Install of ruby-3.1.4 - #complete 
+Ruby was built without documentation, to build it run: rvm docs generate-ri
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ ruby -v
+ruby 3.1.4p223 (2023-03-30 revision 957bb7cb81) [aarch64-linux]
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem -v
+3.3.26
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install travis --no-document
+Fetching pusher-client-0.6.2.gem
+Fetching public_suffix-6.0.2.gem
+Fetching addressable-2.8.7.gem
+Fetching launchy-2.4.3.gem
+Fetching json_pure-2.8.1.gem
+Fetching net-http-pipeline-1.0.1.gem
+Fetching websocket-1.2.11.gem
+Fetching highline-2.1.0.gem
+Fetching net-http-persistent-2.9.4.gem
+Fetching multi_json-1.15.0.gem
+Fetching faraday-retry-1.0.3.gem
+Fetching faraday-rack-1.0.0.gem
+Fetching faraday-patron-1.0.0.gem
+Fetching faraday-net_http_persistent-1.2.0.gem
+Fetching multipart-post-2.4.1.gem
+Fetching faraday-net_http-1.0.2.gem
+Fetching faraday-1.10.4.gem
+Fetching faraday_middleware-1.2.1.gem
+Fetching faraday-httpclient-1.0.1.gem
+Fetching faraday-excon-1.1.0.gem
+Fetching faraday-em_synchrony-1.0.0.gem
+Fetching faraday-em_http-1.0.0.gem
+Fetching faraday-multipart-1.1.0.gem
+Fetching travis-1.11.1.gem
+Fetching thread_safe-0.3.6.gem
+Fetching tzinfo-1.2.11.gem
+Fetching concurrent-ruby-1.3.5.gem
+Fetching i18n-1.14.7.gem
+Fetching activesupport-5.2.8.1.gem
+Fetching gh-0.18.0.gem
+Successfully installed websocket-1.2.11
+Successfully installed pusher-client-0.6.2
+Successfully installed public_suffix-6.0.2
+Successfully installed addressable-2.8.7
+Successfully installed launchy-2.4.3
+Successfully installed json_pure-2.8.1
+Successfully installed highline-2.1.0
+Successfully installed net-http-pipeline-1.0.1
+Successfully installed net-http-persistent-2.9.4
+Successfully installed multi_json-1.15.0
+Successfully installed faraday-retry-1.0.3
+Successfully installed faraday-rack-1.0.0
+Successfully installed faraday-patron-1.0.0
+Successfully installed faraday-net_http_persistent-1.2.0
+Successfully installed faraday-net_http-1.0.2
+Successfully installed multipart-post-2.4.1
+Successfully installed faraday-multipart-1.1.0
+Successfully installed faraday-httpclient-1.0.1
+Successfully installed faraday-excon-1.1.0
+Successfully installed faraday-em_synchrony-1.0.0
+Successfully installed faraday-em_http-1.0.0
+Successfully installed faraday-1.10.4
+Successfully installed faraday_middleware-1.2.1
+Successfully installed thread_safe-0.3.6
+Successfully installed tzinfo-1.2.11
+Successfully installed concurrent-ruby-1.3.5
+Successfully installed i18n-1.14.7
+Successfully installed activesupport-5.2.8.1
+Successfully installed gh-0.18.0
+Successfully installed travis-1.11.1
+30 gems installed
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis version
+Shell completion not installed. Would you like to install it now? |y| y
+1.11.1
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install travis
+Successfully installed travis-1.11.1
+Parsing documentation for travis-1.11.1
+Installing ri documentation for travis-1.11.1
+Done installing documentation for travis after 0 seconds
+1 gem installed
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ sudo apt install ruby ruby-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ruby is already the newest version (1:3.2~ubuntu1).
+ruby set to manually installed.
+The following additional packages will be installed:
+  ruby3.2-dev ruby3.2-doc
+The following NEW packages will be installed:
+  ruby-dev ruby3.2-dev ruby3.2-doc
+0 upgraded, 3 newly installed, 0 to remove and 91 not upgraded.
+Need to get 2426 kB of archives.
+After this operation, 21.7 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 ruby3.2-dev arm64 3.2.3-1ubuntu0.24.04.5 [404 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 ruby-dev arm64 1:3.2~ubuntu1 [4854 B]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 ruby3.2-doc all 3.2.3-1ubuntu0.24.04.5 [2017 kB]
+Fetched 2426 kB in 1s (2607 kB/s)     
+Selecting previously unselected package ruby3.2-dev:arm64.
+(Reading database ... 200492 files and directories currently installed.)
+Preparing to unpack .../ruby3.2-dev_3.2.3-1ubuntu0.24.04.5_arm64.deb ...
+Unpacking ruby3.2-dev:arm64 (3.2.3-1ubuntu0.24.04.5) ...
+Selecting previously unselected package ruby-dev:arm64.
+Preparing to unpack .../ruby-dev_1%3a3.2~ubuntu1_arm64.deb ...
+Unpacking ruby-dev:arm64 (1:3.2~ubuntu1) ...
+Selecting previously unselected package ruby3.2-doc.
+Preparing to unpack .../ruby3.2-doc_3.2.3-1ubuntu0.24.04.5_all.deb ...
+Unpacking ruby3.2-doc (3.2.3-1ubuntu0.24.04.5) ...
+Setting up ruby3.2-doc (3.2.3-1ubuntu0.24.04.5) ...
+Setting up ruby3.2-dev:arm64 (3.2.3-1ubuntu0.24.04.5) ...
+Setting up ruby-dev:arm64 (1:3.2~ubuntu1) ...
+Scanning processes...                                                                                     
+Scanning linux images...                                                                                  
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ sudo apt update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+91 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ sudo apt install -y build-essential libssl-dev libreadline-dev zlib1g-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+build-essential is already the newest version (12.10ubuntu1).
+libssl-dev is already the newest version (3.0.13-0ubuntu3.5).
+libreadline-dev is already the newest version (8.2-4build1).
+zlib1g-dev is already the newest version (1:1.3.dfsg-3.1ubuntu2.1).
+0 upgraded, 0 newly installed, 0 to remove and 91 not upgraded.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+Cloning into '/home/ubuntu/.rbenv'...
+remote: Enumerating objects: 3383, done.
+remote: Counting objects: 100% (284/284), done.
+remote: Compressing objects: 100% (118/118), done.
+remote: Total 3383 (delta 225), reused 166 (delta 166), pack-reused 3099 (from 3)
+Receiving objects: 100% (3383/3383), 718.98 KiB | 3.31 MiB/s, done.
+Resolving deltas: 100% (2083/2083), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ source ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+Cloning into '/home/ubuntu/.rbenv/plugins/ruby-build'...
+remote: Enumerating objects: 16995, done.
+remote: Counting objects: 100% (4716/4716), done.
+remote: Compressing objects: 100% (318/318), done.
+remote: Total 16995 (delta 4583), reused 4413 (delta 4396), pack-reused 12279 (from 3)
+Receiving objects: 100% (16995/16995), 3.36 MiB | 3.62 MiB/s, done.
+Resolving deltas: 100% (12011/12011), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ rbenv install 3.2.2
+==> Downloading ruby-3.2.2.tar.gz...
+-> curl -q -fL -o ruby-3.2.2.tar.gz https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.2.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 19.5M  100 19.5M    0     0  19.7M      0 --:--:-- --:--:-- --:--:-- 19.7M
+==> Installing ruby-3.2.2...
+-> ./configure "--prefix=$HOME/.rbenv/versions/3.2.2" --enable-shared --with-ext=openssl,psych,+
+-> make -j 4
+-> make install
+==> Installed ruby-3.2.2 to /home/ubuntu/.rbenv/versions/3.2.2
+
+NOTE: to activate this Ruby version as the new default, run: rbenv global 3.2.2
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ rbenv global 3.2.2
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ ruby -v
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [aarch64-linux]
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem install travis
+Ignoring debug-1.6.3 because its extensions are not built. Try: gem pristine debug --version 1.6.3
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Ignoring rbs-2.7.0 because its extensions are not built. Try: gem pristine rbs --version 2.7.0
+Error loading RubyGems plugin "/home/ubuntu/.rvm/rubies/ruby-3.1.4/lib/ruby/gems/3.1.0/plugins/executable-hooks_plugin.rb": cannot load such file -- executable-hooks/wrapper (LoadError)
+Error loading RubyGems plugin "/home/ubuntu/.rvm/rubies/ruby-3.1.4/lib/ruby/gems/3.1.0/plugins/gem-wrappers_plugin.rb": cannot load such file -- gem-wrappers (LoadError)
+Fetching ffi-1.17.2-aarch64-linux-gnu.gem
+Fetching net-http-persistent-4.0.5.gem
+Fetching ethon-0.16.0.gem
+Fetching faraday-net_http-3.0.2.gem
+Fetching faraday-2.7.12.gem
+Fetching faraday-typhoeus-1.1.0.gem
+Fetching connection_pool-2.5.3.gem
+Fetching typhoeus-1.4.1.gem
+Fetching tzinfo-2.0.6.gem
+Fetching activesupport-7.0.8.7.gem
+Fetching travis-gh-0.21.0.gem
+Fetching rack-3.1.15.gem
+Fetching rack-test-2.1.0.gem
+Fetching launchy-2.5.2.gem
+Fetching json_pure-2.6.3.gem
+Fetching travis-1.14.0.gem
+Fetching faraday-rack-2.1.2.gem
+Successfully installed connection_pool-2.5.3
+Successfully installed net-http-persistent-4.0.5
+Successfully installed ffi-1.17.2-aarch64-linux-gnu
+Successfully installed ethon-0.16.0
+Successfully installed typhoeus-1.4.1
+Successfully installed faraday-net_http-3.0.2
+Successfully installed faraday-2.7.12
+Successfully installed faraday-typhoeus-1.1.0
+Successfully installed tzinfo-2.0.6
+Successfully installed activesupport-7.0.8.7
+Successfully installed travis-gh-0.21.0
+Successfully installed rack-3.1.15
+Successfully installed rack-test-2.1.0
+Successfully installed launchy-2.5.2
+Successfully installed json_pure-2.6.3
+Successfully installed faraday-rack-2.1.2
+Successfully installed travis-1.14.0
+Parsing documentation for connection_pool-2.5.3
+Installing ri documentation for connection_pool-2.5.3
+Parsing documentation for net-http-persistent-4.0.5
+Installing ri documentation for net-http-persistent-4.0.5
+Parsing documentation for ffi-1.17.2-aarch64-linux-gnu
+Installing ri documentation for ffi-1.17.2-aarch64-linux-gnu
+Parsing documentation for ethon-0.16.0
+Installing ri documentation for ethon-0.16.0
+Parsing documentation for typhoeus-1.4.1
+Installing ri documentation for typhoeus-1.4.1
+Parsing documentation for faraday-net_http-3.0.2
+Installing ri documentation for faraday-net_http-3.0.2
+Parsing documentation for faraday-2.7.12
+Installing ri documentation for faraday-2.7.12
+Parsing documentation for faraday-typhoeus-1.1.0
+Installing ri documentation for faraday-typhoeus-1.1.0
+Parsing documentation for tzinfo-2.0.6
+Installing ri documentation for tzinfo-2.0.6
+Parsing documentation for activesupport-7.0.8.7
+Installing ri documentation for activesupport-7.0.8.7
+Parsing documentation for travis-gh-0.21.0
+Installing ri documentation for travis-gh-0.21.0
+Parsing documentation for rack-3.1.15
+Installing ri documentation for rack-3.1.15
+Parsing documentation for rack-test-2.1.0
+Installing ri documentation for rack-test-2.1.0
+Parsing documentation for launchy-2.5.2
+Installing ri documentation for launchy-2.5.2
+Parsing documentation for json_pure-2.6.3
+Installing ri documentation for json_pure-2.6.3
+Parsing documentation for faraday-rack-2.1.2
+Installing ri documentation for faraday-rack-2.1.2
+Parsing documentation for travis-1.14.0
+Installing ri documentation for travis-1.14.0
+Done installing documentation for connection_pool, net-http-persistent, ffi, ethon, typhoeus, faraday-net_http, faraday, faraday-typhoeus, tzinfo, activesupport, travis-gh, rack, rack-test, launchy, json_pure, faraday-rack, travis after 4 seconds
+17 gems installed
+
+A new release of RubyGems is available: 3.4.10 → 3.6.9!
+Run `gem update --system 3.6.9` to update your installation.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis login --github-token *******
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Successfully logged in as Dr0-ozdik777!
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis lint
+Ignoring executable-hooks-1.7.1 because its extensions are not built. Try: gem pristine executable-hooks --version 1.7.1
+Ignoring gem-wrappers-1.4.0 because its extensions are not built. Try: gem pristine gem-wrappers --version 1.4.0
+Hooray, .travis.yml looks valid :)
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem pristine executable-hooks --version 1.7.1
+Restoring gems to pristine condition...
+Building native extensions. This could take a while...
+# In case of problems run the following command to update binstubs:
+    gem regenerate_binstubs
+Restored executable-hooks-1.7.1
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ gem pristine gem-wrappers --version 1.4.0
+Restoring gems to pristine condition...
+Building native extensions. This could take a while...
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ ex -sc '1i|[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)' -cx README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$  git add .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git commit -m"added CI"
+[main 5cae1b3] added CI
+ 2 files changed, 15 insertions(+)
+ create mode 100644 .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab04'
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git pull origin main --rebase
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.86 KiB | 318.00 KiB/s, done.
+From https://github.com/Dr0-ozdik777/lab04
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+error: could not apply 9c1ba44... Create README.md
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 9c1ba44... Create README.md
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git push origin main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+To https://github.com/Dr0-ozdik777/lab04
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab04'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ nano README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git rebase --continue
+[detached HEAD 9a1f62a] Create README.md
+ 1 file changed, 4 insertions(+)
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply 5cae1b3... added CI
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 5cae1b3... added CI
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git add .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git commit -m"added CI"
+[detached HEAD ecf8f11] added CI
+ 2 files changed, 18 insertions(+)
+ create mode 100644 .travis.yml
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git checkout -b master
+Switched to a new branch 'master'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git branch -a
+  main
+* master
+  remotes/origin/main
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git push origin HEAD:main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 4.54 KiB | 1.51 MiB/s, done.
+Total 10 (delta 1), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Dr0-ozdik777/lab04
+   a0ed754..ecf8f11  HEAD -> main
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git log
+commit ecf8f11f65f43df5c52903c9664fb903c6874fd8 (HEAD -> master, origin/main)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Mon May 19 21:23:19 2025 +0300
+
+    added CI
+
+commit bf9025dda95f52fc5a33d41106843c91ad9fbef7
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Mon May 19 18:24:28 2025 +0300
+
+    Add files via upload
+
+commit 9a1f62a69119ed0dea4060aed9071c6cb180222c
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Thu May 8 17:10:58 2025 +0300
+
+    Create README.md
+
+commit a0ed754b3ce7e8ccc48600e3ab88fe8d5d719681
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Mon May 19 19:33:56 2025 +0300
+
+    Update README.md
+
+commit e9f1ae14d95f8a08e7f8f4cde9f3b8a8b1466d01
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Mon May 19 18:45:26 2025 +0300
+
+    Create README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis lint
+Hooray, .travis.yml looks valid :)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis accounts
+Dr0-ozdik777 (Dr0-ozdik777): not subscribed, 8 repositories
+To set up a subscription, please visit app.travis-ci.com.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis sync
+synchronizing: . done
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis repos
+Dr0-ozdik777/Alfredo_Belcci /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/command.rb:334:in `format': wrong number of arguments (given 5, expected 1..3) (ArgumentError)
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/command.rb:315:in `store_error'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/command.rb:235:in `rescue in execute'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/command.rb:200:in `execute'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli.rb:66:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/bin/travis:21:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/repos.rb:23:in `block in run': can't modify frozen String: "(" (FrozenError)
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/repos.rb:18:in `each'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/repos.rb:18:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli/command.rb:208:in `execute'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli.rb:66:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/bin/travis:21:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `<main>'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis enable
+Detected repository as Dr0-ozdik777/lab04, is this correct? |yes| y
+Dr0-ozdik777/lab04: enabled :)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis whatsup
+nothing to show
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$  travis branches
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis history
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis show
+no build yet for Dr0-ozdik777/lab04
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis env
+too few arguments
+Show or modify build environment variables.
+
+Usage: travis env list [OPTIONS]
+       travis env set NAME VALUE [OPTIONS]
+       travis env unset [NAMES..] [OPTIONS]
+       travis env copy [NAMES..] [OPTIONS]
+       travis env clear [OPTIONS]
+
+    -h, --help                       Display help
+    -i, --[no-]interactive           be interactive and colorful
+    -E, --[no-]explode               don't rescue exceptions
+        --skip-version-check         don't check if travis client is up to date
+        --skip-completion-check      don't check if auto-completion is set up
+    -e, --api-endpoint URL           Travis API server to talk to
+    -I, --[no-]insecure              do not verify SSL certificate of API endpoint
+        --pro                        short-cut for --api-endpoint 'https://api.travis-ci.com/' [deprecated]
+        --com                        short-cut for --api-endpoint 'https://api.travis-ci.com/' [deprecated]
+    -t, --token [ACCESS_TOKEN]       access token to use
+        --debug                      show API requests
+        --debug-http                 show HTTP(S) exchange
+    -X, --enterprise [NAME]          use enterprise setup (optionally takes name for multiple setups)
+        --adapter ADAPTER            Faraday adapter to use for HTTP requests. If omitted, use Typhoeus if it is installed, and Net::HTTP otherwise. See https://lostisland.github.io/faraday/adapters/ for more info
+    -g, --github-token TOKEN         identify by GitHub token
+    -r, --repo SLUG                  repository to use (will try to detect from current git clone)
+    -R, --store-repo SLUG            like --repo, but remembers value for current directory
+    -P, --[no-]public                make new values public
+    -p, --[no-]private               make new values private
+    -u, --[no-]unescape              do not escape values
+    -f, --force                      do not ask for confirmation when clearing out all variables
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git commit --allow-empty -m "Trigger Travis CI"
+[master df07078] Trigger Travis CI
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git push origin main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+To https://github.com/Dr0-ozdik777/lab04
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab04'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis restart
+no build yet for Dr0-ozdik777/lab04
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ travis restart
+no build yet for Dr0-ozdik777/lab04
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git push origin master
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 196 bytes | 196.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Dr0-ozdik777/lab04/pull/new/master
+remote: 
+To https://github.com/Dr0-ozdik777/lab04
+ * [new branch]      master -> master
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ 
+
